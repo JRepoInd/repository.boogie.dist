@@ -40,9 +40,9 @@ def download_zip(pack,branch):
 	urllib2.urlopen("https://github.com/%s/%s/archive/%s.zip"%(uname,pack,branch))
 	
 def gitcli():
-	c,o,e=runcmd("git fetch --all",dirname)
-	c,o,e=runcmd("git reset --hard origin/master",dirname)
-	c,o,e=runcmd("git pull https://%s:%s@github.com/%s/%s.git %s"%(username,password,username,distrepo["repo"],distrepo["branch"]),dirname)
+	#c,o,e=runcmd("git fetch --all",dirname)
+	#c,o,e=runcmd("git reset --hard origin/master",dirname)
+	#c,o,e=runcmd("git pull https://%s:%s@github.com/%s/%s.git %s"%(username,password,username,distrepo["repo"],distrepo["branch"]),dirname)
 	print "%s: Repo synched from upstream"%distrepo["repo"]
 	for pack,branch in packs.iteritems():
 		stage_path=os.path.join(dirname,"staging")
@@ -111,8 +111,9 @@ def gitcli():
 			if os.path.exists(pack_path):
 				shutil.rmtree(pack_path,onerror=remove_readonly)
 			os.makedirs(pack_path)
-			urllib.urlretrieve("https://github.com/%s/%s/archive/%s.zip"%(username,pack,new_version),os.path.join(pack_path,"%s-%s.zip"%(pack,new_version)))
-			print "%s: New zipball retreived on distribution directory"%pack
+			#urllib.urlretrieve("https://github.com/%s/%s/archive/%s.zip"%(username,pack,new_version),os.path.join(pack_path,"%s-%s.zip"%(pack,new_version)))
+			shutil.make_archive(os.path.join(pack_path,"%s-%s.zip"%(pack,new_version)), 'zip', repo_path)
+			print "%s: New zipball created on distribution directory"%pack
 			##update addons.xml
 			create_new=True
 			addonsxml=minidom.parse(os.path.join(dirname,"addons.xml"))
