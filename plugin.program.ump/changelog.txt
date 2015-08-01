@@ -1,0 +1,17 @@
+2015-08-02: 0.0.4 Version Release
+2015-08-02: Update addon.xml
+2015-08-02: 0.0.3 Version Release
+2015-08-02: Update addon.xml
+2015-08-02: 0.0.2 Version Release
+2015-08-02: Update addon.xml
+2015-08-02: 0.0.1 Version Release
+2015-08-01: 0.0.4 Version Release
+2015-08-01: 0.0.4 Version Release
+2015-08-01: 0.0.4 Version Release
+2015-08-01: 0.0.4 Version Release
+2015-08-01: 0.0.4 Version Release
+2015-08-01: 0.0.4 Version Release
+2015-08-01: 0.0.4 Version Release
+2015-08-01: Update addon.xml
+2015-08-01: 0.0.1 Version Release
+2015-08-01: repository commitform 0.0.2
