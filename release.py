@@ -43,6 +43,7 @@ def gitcli():
 	c,o,e=runcmd("git fetch --all",dirname)
 	c,o,e=runcmd("git reset --hard origin/master",dirname)
 	c,o,e=runcmd("git pull https://%s:%s@github.com/%s/%s.git %s"%(username,password,username,distrepo["repo"],distrepo["branch"]),dirname)
+	print "%s: Repo synched from upstream"%distrepo["repo"]
 	for pack,branch in packs.iteritems():
 		stage_path=os.path.join(dirname,"staging")
 		repo_path= os.path.join(stage_path,pack)
