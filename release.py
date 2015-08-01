@@ -40,9 +40,9 @@ def download_zip(pack,branch):
 	urllib2.urlopen("https://github.com/%s/%s/archive/%s.zip"%(uname,pack,branch))
 	
 def gitcli():
-	#c,o,e=runcmd("git fetch --all",dirname)
-	#c,o,e=runcmd("git reset --hard origin/master",dirname)
-	#c,o,e=runcmd("git pull https://%s:%s@github.com/%s/%s.git %s"%(username,password,username,distrepo["repo"],distrepo["branch"]),dirname)
+	c,o,e=runcmd("git fetch --all",dirname)
+	c,o,e=runcmd("git reset --hard origin/master",dirname)
+	c,o,e=runcmd("git pull https://%s:%s@github.com/%s/%s.git %s"%(username,password,username,distrepo["repo"],distrepo["branch"]),dirname)
 	for pack,branch in packs.iteritems():
 		stage_path=os.path.join(dirname,"staging")
 		repo_path= os.path.join(stage_path,pack)
@@ -88,7 +88,7 @@ def gitcli():
 			new_version[2]=	str(int(new_version[2])+1)
 			new_version=[str(x) for x in new_version]
 			new_version = ".".join(new_version)
-			print "%s: Found new version %s since %s"%(pack,new_verion,last_version)
+			print "%s: Found new version %s since %s"%(pack,new_version,last_version)
 			c,log,e=runcmd('git log --pretty=format:"%ad: %s" --date short',repo_path)
 			changelog=open(os.path.join(repo_path,"changelog.txt"),"w")
 			changelog.truncate()
