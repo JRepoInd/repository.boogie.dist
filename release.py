@@ -100,7 +100,7 @@ def gitcli():
 			addon[0].attributes["version"].value=new_version
 			addonxml.writexml( open(os.path.join(repo_path,"addon.xml"), 'w'),encoding="UTF-8")
 			print "%s: New version bumped in addon.xml & changelog"%pack
-			c,o,e=runcmd("git add .",repo_path)
+			c,o,e=runcmd("git add -A .",repo_path)
 			c,o,e=runcmd("git commit -m '%s Version Release'"%new_version,repo_path)
 			c,o,e=runcmd("git tag -a %s -m '%s Version Release'"%(new_version,new_version),repo_path)
 			c,o,e=runcmd("git push https://%s:%s@github.com/%s/%s.git %s"%(username,password,username,pack,branch),repo_path)
@@ -114,6 +114,10 @@ def gitcli():
 			#urllib.urlretrieve("https://github.com/%s/%s/archive/%s.zip"%(username,pack,new_version),os.path.join(pack_path,"%s-%s.zip"%(pack,new_version)))
 			shutil.rmtree(os.path.join(repo_path,".git"),onerror=remove_readonly)
 			shutil.make_archive(os.path.join(pack_path,"%s-%s"%(pack,new_version)), 'zip', stage_path,pack)
+			metas=["icon.png","fanart.jpg","changelog.txt"]
+			for meta in metas:
+				if os.path.exists(os.path.join(repo_path,meta)):
+					shuitl.copy2(os.path.join(repo_path,meta),os.path.join(pack_path,meta))
 			print "%s: New zipball created on distribution directory"%pack
 			##update addons.xml
 			create_new=True
@@ -129,7 +133,7 @@ def gitcli():
 			open(os.path.join(dirname,"addons.xml.md5"),"wb").write(m)
 			print "%s: addons.xml and md5 is updated"%pack
 
-			c,o,e=runcmd("git add .",dirname)
+			c,o,e=runcmd("git add -A .",dirname)
 			c,o,e=runcmd("git commit -m '%s Version Release for %s'"%(new_version,pack),dirname)
 			c,o,e=runcmd("git push https://%s:%s@github.com/%s/%s.git %s"%(username,password,username,distrepo["repo"],distrepo["branch"]),dirname)
 			print "%s: Distribution repo updated"%pack
