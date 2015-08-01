@@ -117,7 +117,7 @@ def gitcli():
 			metas=["icon.png","fanart.jpg","changelog.txt"]
 			for meta in metas:
 				if os.path.exists(os.path.join(repo_path,meta)):
-					shuitl.copy2(os.path.join(repo_path,meta),os.path.join(pack_path,meta))
+					shutil.copy2(os.path.join(repo_path,meta),os.path.join(pack_path,meta))
 			print "%s: New zipball created on distribution directory"%pack
 			##update addons.xml
 			create_new=True
