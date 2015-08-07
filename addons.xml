@@ -18,11 +18,6 @@
 		<source/>
 		<email>boogiepop</email>
 	</extension>
-	<extension name="Boogie's Kodi Repo" point="xbmc.addon.repository">
-		<info compressed="false">http://raw.github.com/huseyinbiyik/repository.boogie.dist/master/addons.xml</info>
-		<checksum>http://raw.github.com/huseyinbiyik/repository.boogie.dist/master/addons.xml.md5</checksum>
-		<datadir zip="true">http://raw.github.com/huseyinbiyik/repository.boogie.dist/master</datadir>
-	</extension>
 </addon><addon id="repository.boogie" name="Boogie's Kodi Repo" provider-name="boogiepop" version="0.0.2">
 	<extension name="Boogie's Kodi Repo" point="xbmc.addon.repository">
 		<info compressed="false">http://raw.github.com/huseyinbiyik/repository.boogie.dist/master/addons.xml</info>
