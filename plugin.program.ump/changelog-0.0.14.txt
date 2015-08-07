@@ -1,4 +1,6 @@
 2015-08-07: version bump
+2015-08-07: 0.0.13 Version Release
+2015-08-07: version bump
 2015-08-07: 0.0.12 Version Release
 2015-08-07: version bump
 2015-08-07: 0.0.11 Version Release
