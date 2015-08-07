@@ -1,3 +1,5 @@
+2015-08-07: version bump
+2015-08-07: 0.0.9 Version Release
 2015-08-07: Update changelog.txt
 2015-08-07: 0.0.8 Version Release
 2015-08-07: disable notifications, dont spam logfile
