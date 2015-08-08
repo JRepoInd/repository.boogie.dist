@@ -1,3 +1,4 @@
+2015-08-08: 0.0.15 Version Release
 2015-08-08: version bump
 2015-08-08: 0.0.15 Version Release
 2015-08-08: new link provider: gvcenter
