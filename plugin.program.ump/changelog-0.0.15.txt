@@ -1,3 +1,5 @@
+2015-08-08: new url provider: filenuke
+2015-08-07: 0.0.14 Version Release
 2015-08-07: version bump
 2015-08-07: 0.0.13 Version Release
 2015-08-07: version bump
