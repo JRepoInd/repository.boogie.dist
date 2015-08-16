@@ -1,4 +1,11 @@
-2015-08-11: 0.0.17 Version Release
+2015-08-16: new arts for new providers
+2015-08-16: ump:task manager speed up, dizipub:fix regex for vk, dialogselect:fix zorder, videomega: new url provider, ishared: new url provider, afdah: new link provider
+2015-08-15: lastfm: cleanup, redmp3: limit iteration, imdb: provide alternative names, top listings for series and documentaries, primewire: matchin algo rewritten. can provide series too now, api: new function: get_vidnames
+2015-08-15: imdb: preemptive search
+2015-08-15: api: web_serach function tvdb: preemptive search
+2015-08-14: tvdb: refresh seasons/episodes on each runtime, use static urls
+2015-08-14: ann:update epis each runtime
+2015-08-12: imdb can provide series now, prevent future dead locks on tm
 2015-08-11: version bump
 2015-08-11: 0.0.17 Version Release
 2015-08-11: new selector ui, clean task manager
