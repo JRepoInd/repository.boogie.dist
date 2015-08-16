@@ -90,6 +90,10 @@ def gitcli():
 			new_version=[str(x) for x in new_version]
 			new_version = ".".join(new_version)
 			print "%s: Found new version %s since %s"%(pack,new_version,last_version)
+			print "Do you want to continue with the release? (y/n)":
+			ans=raw_input()
+			if not ans=="y":
+				sys.exit()
 			c,log,e=runcmd('git log --pretty=format:"%ad: %s" --date short',repo_path)
 			changelog=open(os.path.join(repo_path,"changelog.txt"),"w")
 			changelog.truncate()
