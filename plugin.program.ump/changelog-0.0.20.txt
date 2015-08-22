@@ -1,3 +1,6 @@
+2015-08-22: dizigold: new link provider
+2015-08-22: api: load icons from remote server, no need to distribute pngs
+2015-08-22: imdb: fix typos urlproviders: dont use json for arg parsing cloudfare: moved to api ui: new progres bars for overall operation execsjs: removed not cross platform new link providers: dizilab, dizimag, sezonlukdizi
 2015-08-16: new arts for new providers
 2015-08-16: ump:task manager speed up, dizipub:fix regex for vk, dialogselect:fix zorder, videomega: new url provider, ishared: new url provider, afdah: new link provider
 2015-08-15: lastfm: cleanup, redmp3: limit iteration, imdb: provide alternative names, top listings for series and documentaries, primewire: matchin algo rewritten. can provide series too now, api: new function: get_vidnames
