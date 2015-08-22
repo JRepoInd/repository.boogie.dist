@@ -1,3 +1,4 @@
+2015-08-22: fix windows may cause cookie manager cant save to file on windows.
 2015-08-22: dizigold: new link provider
 2015-08-22: api: load icons from remote server, no need to distribute pngs
 2015-08-22: imdb: fix typos urlproviders: dont use json for arg parsing cloudfare: moved to api ui: new progres bars for overall operation execsjs: removed not cross platform new link providers: dizilab, dizimag, sezonlukdizi
