@@ -1,3 +1,4 @@
+2015-08-23: koreanturk: new link provider, dailymotion: new url provider
 2015-08-22: fix windows may cause cookie manager cant save to file on windows.
 2015-08-22: dizigold: new link provider
 2015-08-22: api: load icons from remote server, no need to distribute pngs
